@@ -1,0 +1,619 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #0f1b4c;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: Poppins, sans-serif;
+}
+
+/* ==================== Common ==================== */
+.content {
+    /* Nếu width màn hình < 1110px thì nó sẽ ăn 
+  theo 100% chiều rộng của trình duyệt */
+    width: 1110px;
+    max-width: calc(100% - 24px);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+.btn {
+    display: inline-block;
+    background: var(--primary-color);
+    border-radius: 12px;
+    min-width: 98px;
+    color: #fff;
+    font-size: 1.4rem;
+    font-weight: 500;
+    text-align: center;
+    padding: 18px 16px;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+.line-clamp {
+    display: -webkit-box;
+    -webkit-line-clamp: var(--line-clamp, 2);
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* ==================== Header ==================== */
+.fixed-header {
+    background: #e6f0ff;
+    padding-top: 26px;
+    position: sticky;
+    top: -26px;
+    z-index: 26;
+}
+
+.hero-wrap {
+    position: relative;
+    height: calc(100vh - 90px);
+    background: #e6f0ff;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    padding: 12px 0;
+}
+
+.navbar ul {
+    display: flex;
+    margin-left: 50px;
+}
+
+.navbar ul a {
+    color: #4f5361;
+    font-size: 1.4rem;
+    font-weight: 500;
+    padding: 8px 14px;
+}
+
+.navbar ul a:hover {
+    text-decoration: underline;
+}
+
+.navbar .actions {
+    margin-left: auto;
+}
+
+.navbar .actions .action-link {
+    color: var(--primary-color);
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin-right: 18px;
+}
+
+.navbar .actions .action-btn {
+    padding: 13px 16px;
+    border-radius: 8px;
+}
+
+.hero {
+    padding-top: 118px;
+}
+
+.hero .info {
+    max-width: 51%;
+}
+
+.hero .sub-title {
+    color: #687690;
+    font-size: 1.8rem;
+    line-height: 1.5;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    margin-bottom: 8px;
+}
+
+.hero .title {
+    color: #000336;
+    font-size: 6.4rem;
+    line-height: 1.19;
+    font-weight: 700;
+}
+
+.hero .desc {
+    margin-top: 30px;
+    color: #5a6473;
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 1.8;
+}
+
+.hero-cta {
+    margin-top: 40px;
+    min-width: 170px;
+}
+
+.hero-img {
+    position: absolute;
+    bottom: 0;
+    right: calc((100vw - 1110px) / 2 - 100px);
+}
+
+/* ==================== Clients ==================== */
+.clients {
+    margin-top: 79px;
+    padding: 43px 0 64px;
+}
+
+.clients .row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.clients .row-desc {
+    margin-top: 23px;
+}
+
+.clients .row-desc .desc {
+    color: #7d8589;
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 1.25;
+}
+
+.clients .images {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 96px;
+}
+
+/* ==================== Guides ==================== */
+.guides {
+    margin-top: 40px;
+    padding: 79px 0;
+}
+
+.guides .sub-title {
+    position: relative;
+    color: #000339;
+    text-align: center;
+    font-size: 3.5rem;
+    font-weight: 600;
+    line-height: 1;
+}
+
+.guides .sub-title::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 41px;
+    height: 4px;
+    border-radius: 12px;
+    background: #000339;
+}
+
+.guides .desc {
+    margin-top: 20px;
+    text-align: center;
+    color: #5a6473;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.875;
+    width: 459px;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.list-guide {
+    display: flex;
+    justify-content: center;
+    margin-top: 70px;
+}
+
+.guild-item {
+    margin: 0 70px;
+    text-align: center;
+}
+
+.guild-item .title {
+    color: #3b3c45;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 1.1;
+    margin-top: 26px;
+}
+
+.guild-item .link {
+    margin-top: 10px;
+    display: inline-block;
+    color: #0689ff;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.guild-item .link .arrow {
+    margin-left: 4px;
+}
+
+.guide-cta {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.guide-cta .btn {
+    min-width: 170px;
+}
+
+/* ==================== Features ==================== */
+.features {
+    margin-top: 40px;
+    background: #f5fafe;
+    padding: 110px 0;
+}
+
+.features .row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.features .sub-title {
+    color: #000339;
+    font-size: 3.5rem;
+    font-weight: 600;
+    line-height: 1;
+}
+
+.features .desc {
+    color: #5a6473;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.875;
+}
+
+.features .link {
+    display: flex;
+    align-items: center;
+    color: #0689ff;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.features .link .arrow {
+    margin-left: 8px;
+}
+
+.list-features {
+    margin-top: 70px;
+    display: flex;
+    gap: 30px;
+}
+
+.list-features .item {
+    flex: 1;
+    border-radius: 12px;
+    box-shadow: 0px 65px 80px -46px rgba(226, 238, 249, 0.6);
+    background: #fff;
+}
+
+.list-features .item > a {
+    cursor: pointer;
+}
+
+.list-features .item .thumb {
+    width: 100%;
+    max-height: 227px;
+    object-fit: cover;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+.list-features .body {
+    padding: 17px 20px 24px;
+}
+
+.list-features .body .title a {
+    color: #000339;
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1.5;
+    margin-bottom: 11px;
+    word-break: break-all;
+}
+
+.list-features .body .desc {
+    color: #a3a6ab;
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin-bottom: 21px;
+    line-height: 1.5;
+    --line-clamp: 3;
+    word-break: break-all;
+}
+
+.list-features .body .info {
+    display: flex;
+    align-items: center;
+}
+
+.list-features .body .label {
+    color: #4d4d52;
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 500;
+    letter-spacing: 0.14px;
+    margin-left: 8px;
+}
+
+.list-features .body .icon:not(:first-child) {
+    margin-left: 22px;
+}
+
+/* ==================== Stats ==================== */
+.stats {
+    padding: 50px 0;
+    margin-top: 75px;
+}
+
+.stats .content {
+    width: 1017px;
+}
+
+.stats .row {
+    display: flex;
+}
+
+.stats .img-block,
+.stats .info {
+    width: 50%;
+}
+
+.stats .img-block {
+    position: relative;
+}
+.stats .img-block .stats-trend {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 239px;
+    padding: 45px 22px 40px;
+    border-radius: 0px 0px 12px 12px;
+    background: #fff;
+    box-shadow: 90px 85px 100px 0px rgba(0, 0, 0, 0.06);
+}
+
+.stats-trend .row {
+    margin-bottom: 8px;
+}
+
+.stats-trend .desc {
+    color: #a7a7a7;
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 1.5;
+}
+.stats-trend .separate {
+    height: 1.2px;
+    margin-top: 25px;
+    background-color: #e9e9e9;
+}
+
+.stats-trend .value {
+    color: #000339;
+    font-size: 2.6rem;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 0.26px;
+}
+.stats-trend .row img {
+    margin-left: auto;
+}
+
+.stats-trend .avatar-block {
+    margin-top: 26px;
+    display: flex;
+    gap: 14px 16px;
+    flex-wrap: wrap;
+}
+
+.stats-trend .avatar-block .avatar-group {
+    display: flex;
+}
+
+.stats-trend .avatar {
+    width: 16px;
+    height: 16px;
+    object-fit: cover;
+    border-radius: 999px;
+    margin-left: -3px;
+}
+
+.stats-trend .avatar:first-child {
+    margin-left: 0;
+}
+
+.stats .img-block .image {
+    display: block;
+    margin-left: auto;
+    width: 400px;
+    height: 460px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 40px 80px 155px 0px rgba(30, 103, 113, 0.03);
+}
+
+.stats .info {
+    padding: 79px 0 0 165px;
+}
+
+.stats .sub-title {
+    position: relative;
+    width: 269px;
+    color: #000339;
+    font-size: 3.5rem;
+    font-weight: 600;
+    line-height: 1.28;
+    margin-bottom: 20px;
+}
+
+.stats .sub-title::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -10px;
+    left: 0;
+    width: 41px;
+    height: 4px;
+    border-radius: 12px;
+    background: #000339;
+}
+
+.stats .info .desc {
+    width: 309px;
+    color: #5a6473;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.875;
+}
+
+.stats .row:last-child {
+    margin-top: 110px;
+    justify-content: space-between;
+    padding: 0 32px;
+}
+
+.stats .qty-item .qty {
+    color: #000;
+    display: block;
+    font-size: 6.4rem;
+    font-weight: 600;
+    line-height: 1;
+    margin-bottom: 22px;
+}
+
+.stats .qty-item .desc {
+    color: #7b8087;
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+/* ==================== Subscribe ==================== */
+.subscribe {
+    margin-top: 90px;
+    margin-bottom: 55px;
+}
+
+.subscribe .body {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 370px;
+    border-radius: 20px;
+    background: #063183;
+    padding: 110px 80px;
+}
+
+.subscribe .title {
+    color: #fff;
+    font-size: 3.5rem;
+    font-weight: 600;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.subscribe .info {
+    width: 501px;
+    max-width: 100%;
+}
+
+.subscribe .desc {
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.875;
+    margin-bottom: 20px;
+    --line-clamp: 3;
+}
+
+.subscribe .btn {
+    width: 151px;
+    background: #fff;
+    color: #002366;
+}
+
+.subscribe .image {
+    position: absolute;
+    right: 221px;
+    bottom: 0;
+}
+/* ==================== FOOTER ==================== */
+.footer {
+    padding: 58px 165px 58px;
+}
+
+.footer .row {
+    display: flex;
+}
+
+.footer .row:first-child {
+    margin-bottom: 81px;
+    gap: 185px;
+}
+
+.footer .heading {
+    font-family: "Lato", sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 42px;
+    color: #1c1c1d;
+}
+
+.footer .item a,
+.footer .desc {
+    display: inline-block;
+    color: #7a7a7e;
+    font-size: 1.6rem;
+    font-weight: 400;
+    margin-bottom: 21px;
+}
+
+.footer .item a {
+    white-space: nowrap;
+}
+
+.footer .desc {
+    margin-bottom: 40px;
+    color: #7a7a7e;
+    line-height: 1.75;
+}
+
+.footer .social {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer .row:last-child {
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer .copyright {
+    color: #c2c2c2;
+    font-size: 1.4rem;
+    font-weight: 400;
+}
